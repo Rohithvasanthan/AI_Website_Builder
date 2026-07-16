@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     avatar:{
-        type: string
+        type: String
     },
     credits:{
         type: Number,
