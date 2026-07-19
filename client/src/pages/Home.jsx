@@ -1,6 +1,8 @@
 import {motion} from "motion/react"
 
 function Home() {
+
+    const highlights = ["AI generated Code" ,"Fully Responsive Layouts","Production Ready Output",]
   return (
     <div className="relative min-h-screen bg-[#040404] text-white overflow-hidden">
         <motion.div 
@@ -35,6 +37,33 @@ function Home() {
                 </span>
 
             </motion.h1>
+            <motion.p 
+            initial={{opacity:0,y:20}}
+            animate={{opacity:1,y:0}}
+            className="mt-8 max-w-2xl mx-auto text-zinc-400 text-lg"
+            >
+                Describe your idea and let AI generate a modern ,
+                responsive, production-ready website.
+            </motion.p>
+            <button className="px-10 py-4 rounded-xl bg-white text-black font-semibold hover:scale-105 transition mt-12">
+                Get Started
+            </button>
+        </section>
+
+        <section className="max-w-7xl mx-auto px-6 pb-32">
+            <div>
+                {highlights.map((h,i)=>(
+                    <motion.div 
+                    key={i}
+                    initial={{opacity:0,y:40}}
+                    whileInView={{opacity:1,y:0}}
+                    className="rounded 2-xl bg-white/5 border border-white/10 p-8"
+                    >
+
+                    </motion.div>
+                ))}
+            </div>
+
         </section>
     </div>
   )
