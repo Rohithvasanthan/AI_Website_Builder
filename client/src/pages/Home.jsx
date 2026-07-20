@@ -32,7 +32,7 @@ function Home() {
             className="text-5xl md:text-7xl font-bold tracking-tight"
             >
                 Build Stunning Websites <br/>
-                <span className="bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transaparent">with AI
+                <span className="bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">with AI
 
                 </span>
 
@@ -51,14 +51,20 @@ function Home() {
         </section>
 
         <section className="max-w-7xl mx-auto px-6 pb-32">
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {highlights.map((h,i)=>(
                     <motion.div 
                     key={i}
                     initial={{opacity:0,y:40}}
                     whileInView={{opacity:1,y:0}}
+                    transition={{duration:1}}
                     className="rounded 2-xl bg-white/5 border border-white/10 p-8"
                     >
+                        <h1 className="text-xl font-semibold mb-3">{h}</h1>
+                        <p className="text-sm text-zinc-400">
+                            Genweb.ai builds real websites - clean code,
+                            animations , responsiveness and scalable structure
+                        </p>
 
                     </motion.div>
                 ))}
