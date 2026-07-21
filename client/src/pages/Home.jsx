@@ -1,8 +1,13 @@
 import {motion} from "motion/react"
+import { useState } from "react"
 
 function Home() {
 
     const highlights = ["AI generated Code" ,"Fully Responsive Layouts","Production Ready Output",]
+
+
+
+    const [openLogin,setOpenLogin]=useState(false);
   return (
     <div className="relative min-h-screen bg-[#040404] text-white overflow-hidden">
         <motion.div 
@@ -71,6 +76,10 @@ function Home() {
             </div>
 
         </section>
+
+        <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
+                &copy; {new Date().getFullYear()} GenWeb.ai
+        </footer>
     </div>
   )
 }
