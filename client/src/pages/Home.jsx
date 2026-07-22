@@ -1,5 +1,6 @@
 import {motion} from "motion/react"
 import { useState } from "react"
+import LoginModal from "../components/LoginModal";
 
 function Home() {
 
@@ -80,6 +81,9 @@ function Home() {
         <footer className="border-t border-white/10 py-10 text-center text-sm text-zinc-500">
                 &copy; {new Date().getFullYear()} GenWeb.ai
         </footer>
+
+
+{openLogin && <LoginModal  open={}/> }
     </div>
   )
 }
