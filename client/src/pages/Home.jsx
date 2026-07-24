@@ -22,7 +22,9 @@ function Home() {
                 </div>
                 <div className="flex items-center gap-5">
                     <div className="hidden md:inline text-sm text-zinc-100 hover:text-white cursor-pointer">Pricing</div>
-                    <button className="px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 text-sm">
+                    <button className="px-4 py-2 rounded-lg border border-white/20 hover:bg-white/10 text-sm"
+                    onClick={()=>setOpenLogin(true)}
+                    >
                       Get Started
                     </button>
 
@@ -83,7 +85,7 @@ function Home() {
         </footer>
 
 
-{openLogin && <LoginModal  open={}/> }
+{openLogin && <LoginModal  open={openLogin} onClose={()=>setOpenLogin(false)}/> }
     </div>
   )
 }
